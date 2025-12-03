@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex flex-col gap-12 lg:flex-row lg:items-center pt-10"
+      className="flex flex-col-reverse gap-10 lg:flex-row lg:items-center pt-10"
     >
-      {/* Left: text */}
+      {/* Left on desktop / below image on mobile: text */}
       <div className="flex-1 space-y-5">
         <p className="text-sm uppercase tracking-[0.25em] text-sky-500">
           Hi, I'm Mercy Nicholas 👋
@@ -54,18 +54,21 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right: toggle + photo }
-      <div className="flex-1 flex flex-col items-center gap-4 lg:items-center">
+      {/* Right on desktop / top on mobile: toggle + photo *
+      <div className="flex-1 flex flex-col items-center gap-4 lg:items-end">
         <ThemeToggle />
-        </div>
 */}
-        <div className="rounded-2xl border-4 border-blue-400 shadow-lg bg-white dark:bg-slate-900 p-2">
+        <div
+          className="relative w-56 h-64 sm:w-64 sm:h-72 md:w-72 md:h-80
+                     rounded-3xl border-4 border-blue-400 bg-white dark:bg-slate-900
+                     shadow-lg overflow-hidden"
+        >
           <Image
             src="/m3.jpg"
-            width={300}
-            height={300}
             alt="Mercy photo"
-            className="rounded-xl object-cover"
+            fill
+            sizes="(min-width: 1024px) 18rem, (min-width: 640px) 16rem, 14rem"
+            className="object-cover object-center"
           />
         </div>
     </section>
