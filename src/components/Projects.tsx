@@ -47,6 +47,7 @@ const projects: Project[] = [
     description:
       "This portfolio itself – built with Next.js and Tailwind, focused on clean UX and simple animations.",
     tech: ["Next.js", "TypeScript", "Tailwind"],
+    github: "https://github.com/Mercy-2512/my-portfolio",
   },
 ];
 
